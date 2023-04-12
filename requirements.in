@@ -1,4 +1,6 @@
 django>=4
+dj-database-url
+django-debreach
 django-reverse-js
 python-decouple
 gunicorn
