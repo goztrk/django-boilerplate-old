@@ -1,4 +1,5 @@
 [tool.black]
+line-length = 100
 target-version = ['py311']
 quiet = true
 exclude = '''
@@ -29,4 +30,4 @@ import_heading_zion = "ZION Shared Library Imports"
 import_heading_firstparty = "Application Imports"
 
 [tool.pylint.format]
-max-line-length = "88"
+max-line-length = 100
