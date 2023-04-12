@@ -1,0 +1,10 @@
+bandit
+black
+coverage
+flake8
+isort
+model-bakery
+pre-commit
+pylint-django
+prospector[with_vulture]
+safety
