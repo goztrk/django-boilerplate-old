@@ -1,9 +1,15 @@
+celery[redis]
+celery-redbeat
 django>=4
-dj-database-url
+django-dbshell-plus
 django-debreach
+django-extensions
+django-log-request-id
 django-reverse-js
+django-vite
 python-decouple
 graphene-django
 gunicorn
 whitenoise
+psutil
 psycopg2
