@@ -14,11 +14,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# Third Party (PyPI) Imports
+from graphene_django.views import GraphQLView
+
 # Django Imports
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("reverse.js", "django_reverse_js.views.urls_js", name="reverse_js"),
+    path("graphql", GraphQLView.as_view(graphiql=settings.DEBUG)),
 ]

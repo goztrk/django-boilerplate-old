@@ -26,10 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-DATABASES = {
-    "default": config("DATABASE_URL", cast=db_url),
-}
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -38,6 +34,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_reverse_js",
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -81,6 +78,14 @@ TEMPLATES = [
     },
 ]
 
+
+DATABASES = {
+    "default": config("DATABASE_URL", cast=db_url),
+}
+
+GRAPHENE = {
+    "SCHEMA": "{{ project_name }}.schema.schema",
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -3,6 +3,7 @@ dj-database-url
 django-debreach
 django-reverse-js
 python-decouple
+graphene-django
 gunicorn
 whitenoise
 psycopg2
