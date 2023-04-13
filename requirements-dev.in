@@ -2,6 +2,7 @@
 bandit
 black
 coverage
+djlint
 flake8
 isort
 model-bakery

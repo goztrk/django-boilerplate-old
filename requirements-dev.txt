@@ -28,9 +28,14 @@ click==8.1.3
     # via
     #   -c requirements.txt
     #   black
+    #   djlint
     #   safety
+colorama==0.4.6
+    # via djlint
 coverage==7.2.3
     # via -r requirements-dev.in
+cssbeautifier==1.14.7
+    # via djlint
 dill==0.3.6
     # via pylint
 distlib==0.3.6
@@ -39,10 +44,16 @@ django==4.2
     # via
     #   -c requirements.txt
     #   model-bakery
+djlint==1.23.0
+    # via -r requirements-dev.in
 dodgy==0.2.1
     # via prospector
 dparse==0.6.2
     # via safety
+editorconfig==0.12.3
+    # via
+    #   cssbeautifier
+    #   jsbeautifier
 filelock==3.11.0
     # via virtualenv
 flake8==6.0.0
@@ -53,6 +64,10 @@ gitdb==4.0.10
     # via gitpython
 gitpython==3.1.31
     # via bandit
+html-tag-names==0.1.2
+    # via djlint
+html-void-elements==0.1.0
+    # via djlint
 identify==2.5.22
     # via pre-commit
 idna==3.4
@@ -61,6 +76,10 @@ isort==5.12.0
     # via
     #   -r requirements-dev.in
     #   pylint
+jsbeautifier==1.14.7
+    # via
+    #   cssbeautifier
+    #   djlint
 lazy-object-proxy==1.9.0
     # via astroid
 markdown-it-py==2.2.0
@@ -85,7 +104,9 @@ packaging==23.1
     #   requirements-detector
     #   safety
 pathspec==0.11.1
-    # via black
+    # via
+    #   black
+    #   djlint
 pbr==5.11.1
     # via stevedore
 pep8-naming==0.13.3
@@ -142,8 +163,11 @@ pyyaml==6.0
     # via
     #   -c requirements.txt
     #   bandit
+    #   djlint
     #   pre-commit
     #   prospector
+regex==2023.3.23
+    # via djlint
 requests==2.28.2
     # via safety
 requirements-detector==1.1.0
@@ -156,6 +180,11 @@ safety==2.3.4
     # via -r requirements-dev.in
 setoptconf==0.3.0
     # via prospector
+six==1.16.0
+    # via
+    #   -c requirements.txt
+    #   cssbeautifier
+    #   jsbeautifier
 smmap==5.0.0
     # via gitdb
 snowballstemmer==2.2.0
@@ -173,6 +202,8 @@ toml==0.10.2
     #   vulture
 tomlkit==0.11.7
     # via pylint
+tqdm==4.65.0
+    # via djlint
 urllib3==1.26.15
     # via requests
 virtualenv==20.21.0

@@ -8,7 +8,6 @@ django-import-export
 django-log-request-id
 django-model-utils
 django-reverse-js
-django-webpack-loader
 python-decouple
 graphene-django
 gunicorn
