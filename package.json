@@ -1,4 +1,8 @@
 {
   "name": "frontend",
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
