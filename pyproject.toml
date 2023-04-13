@@ -19,6 +19,7 @@ exclude = '''
 [tool.isort]
 profile = "black"
 multi_line_output = 8
+lines_after_imports = 2
 known_django = "django"
 known_zion = "zion"
 known_first_party = ["{{ project_name }}"]

@@ -17,6 +17,7 @@ from pathlib import Path
 from decouple import config
 from dj_database_url import parse as db_url
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,6 +36,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_reverse_js",
     "graphene_django",
+    "django_vite",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -49,9 +52,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "{{ project_name }}.urls"
+ROOT_URLCONF = "core.urls"
 
-WSGI_APPLICATION = "{{ project_name }}.wsgi.application"
+WSGI_APPLICATION = "core.wsgi.application"
 
 TEMPLATES = [
     {
@@ -84,7 +87,7 @@ DATABASES = {
 }
 
 GRAPHENE = {
-    "SCHEMA": "{{ project_name }}.schema.schema",
+    "SCHEMA": "core.schema.schema",
 }
 
 # Password validation

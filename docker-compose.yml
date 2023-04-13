@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  db: # TODO: rename to {{project_name}}_
+    image: "postgres:alpine"
+    environment:
+      - POSTGRES_USER=core_db_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=core_db
+    ports:
+      - "5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data:delegated
+
+  broker: # TODO: rename to {{project_name}}_
+    image: "rabbitmq:alpine"
+
+  result: # TODO: rename to {{project_name}}_
+    image: "redis:alpine"
+
+  backend: # TODO: rename to {{project_name}}_
+    build:
+      dockerfile: backend/Dockerfile
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/home/user/app/
+    env_file: backend/.env
+    depends_on:
+      - db
+      - broker
+      - result
+
+  celery: # TODO: rename to {{project_name}}_
+    build:
+      dockerfile: backend/Dockerfile
+      context: .
+    command: python manage.py celery
+    volumes:
+      - ./backend:/home/user/app/
+    env_file: backend/.env
+    depends_on:
+      - db
+      - broker
+      - result
+
+  mailhog: # TODO: rename to {{project_name}}_
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI
+
+volumes:
+  dbdata:
+    external:
+      name: core_dbdata # TODO rename to {{project_name}}_dbdata

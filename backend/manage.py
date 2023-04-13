@@ -18,9 +18,9 @@ def main():
         if settings_module:
             print(
                 "Ignoring config('DJANGO_SETTINGS_MODULE') because it's test. "
-                "Using '{{project_name}}.settings.test'"
+                "Using 'core.settings.test'"
             )
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{ project_name }}.settings.test")
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings.test")
     else:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings_module)
     try:
