@@ -140,6 +140,7 @@ pylint-plugin-utils==0.7
     #   pylint-flask
 pyyaml==6.0
     # via
+    #   -c requirements.txt
     #   bandit
     #   pre-commit
     #   prospector

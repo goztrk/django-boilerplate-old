@@ -4,9 +4,11 @@ django>=4
 django-dbshell-plus
 django-debreach
 django-extensions
+django-import-export
 django-log-request-id
+django-model-utils
 django-reverse-js
-django-vite
+django-webpack-loader
 python-decouple
 graphene-django
 gunicorn
