@@ -4,25 +4,14 @@
 import os
 import sys
 
-# Third Party (PyPI) Imports
-from decouple import config
 
 # isort: off
 
 
 def main():
     """Run administrative tasks."""
-    settings_module = config("DJANGO_SETTINGS_MODULE", default=None)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
-    if sys.argv[1] == "test":
-        if settings_module:
-            print(
-                "Ignoring config('DJANGO_SETTINGS_MODULE') because it's test. "
-                "Using 'core.settings.test'"
-            )
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings.test")
-    else:
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings_module)
     try:
         from django.core.management import execute_from_command_line  # pylint: disable=C0415
     except ImportError as exc:
