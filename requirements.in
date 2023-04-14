@@ -1,6 +1,7 @@
 celery[redis]
 celery-redbeat
 django>=4
+dj_database_url
 django-dbshell-plus
 django-debreach
 django-extensions
@@ -8,6 +9,8 @@ django-import-export
 django-log-request-id
 django-model-utils
 django-reverse-js
+django-split-settings
+django-vite
 python-decouple
 graphene-django
 gunicorn
