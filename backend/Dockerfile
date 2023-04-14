@@ -22,11 +22,11 @@ RUN pip install -r requirements.txt && \
 # Clean the house
 RUN apt-get purge libpq-dev -y && \
     apt-get autoremove -y && \
-    rm /var/lib/apt/lists/* && \
+    rm -rf /var/lib/apt/lists/* && \
     rm -rf /var/cache/apt/*
 
 ADD backend/ /home/user/app/backend
 
 USER user
 
-CMD gunicorn core.wsgi --log-file - -b 0.0.0.0:8000 --reload
+CMD gunicorn core.wsgi:application --log-file - -b 0.0.0.0:8000 --reload
