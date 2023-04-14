@@ -4,6 +4,17 @@
       "source.organizeImports": true
     }
   },
+  "python.envFile": "${workspaceFolder}/backend/.env",
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+  "pylint.importStrategy": "fromEnvironment",
+  "python.linting.enabled": true,
+  "python.linting.cwd": "${workspaceFolder}/backend",
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    "--django-settings-module=core.settings",
+  ],
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
@@ -16,7 +27,8 @@
   },
   "cSpell.words": [
     "GRAPHENE",
+    "graphiql",
     "Parens",
     "tailwindcss"
-  ]
+  ],
 }

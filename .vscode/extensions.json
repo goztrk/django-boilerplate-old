@@ -1,6 +1,16 @@
 {
   "recommendations": [
     "arcanis.vscode-zipfs",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "monosans.djlint",
+    "editorconfig.editorconfig",
+    "ms-python.isort",
+    "esbenp.prettier-vscode",
+    "ms-python.pylint",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "bradlc.vscode-tailwindcss",
+    "ms-python.flake8",
+    "shamanu4.django-intellisense"
   ]
 }
