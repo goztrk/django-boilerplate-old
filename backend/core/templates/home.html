@@ -1,4 +1,8 @@
+{% load django_vite %}
 {% extends "base.html" %}
 {% block content %}
   <div id="app"></div>
 {% endblock content %}
+{% block scripts %}
+  {% vite_asset 'apps/home/app.tsx' %}
+{% endblock scripts %}

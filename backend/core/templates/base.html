@@ -1,3 +1,4 @@
+{% load django_vite %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="">
     <meta name="keywords" content="">
+    {% vite_hmr_client %}
     <title>
       {% block title %}
       {% endblock title %}
@@ -15,8 +17,6 @@
   <body>
     {% block content %}
     {% endblock content %}
-    <script type="module" src="http://localhost:5173/@vite/client"></script>
-    <script type="module" src="http://localhost:5173/frontend/apps/home/app.tsx"></script>
     <script type="module">
       import RefreshRuntime from 'http://localhost:5173/@react-refresh'
       RefreshRuntime.injectIntoGlobalHook(window)
