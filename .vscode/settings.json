@@ -26,6 +26,7 @@
     "editor.defaultFormatter": "monosans.djlint"
   },
   "cSpell.words": [
+    "generouted",
     "GRAPHENE",
     "graphiql",
     "Parens",

@@ -1,20 +1,23 @@
-import { defineConfig } from 'vite';
 import path from 'path';
+
 import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+
+const rootDir = path.resolve(__dirname, 'frontend');
 
 // https://vitejs.dev/config/
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  root: path.resolve(__dirname, 'frontend'),
+  root: rootDir,
   base: 'static/',
   build: {
     manifest: true,
     outDir: path.resolve(__dirname, 'public/js'),
     rollupOptions: {
       input: {
-        app: 'apps/home/app.tsx'
+        home: 'apps/home/main.tsx',
       },
     },
   },

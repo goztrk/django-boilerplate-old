@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # Third Party (PyPI) Imports
+from django_reverse_js import views as django_reverse_js_views
 from graphene_django.views import GraphQLView
 
 # Django Imports
@@ -22,8 +23,13 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 
+# Application Imports
+from core import views
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("reverse.js", "django_reverse_js.views.urls_js", name="reverse_js"),
-    path("graphql", GraphQLView.as_view(graphiql=settings.DEBUG)),
+    path("reverse.js", django_reverse_js_views.urls_js, name="reverse_js"),
+    # path("graphql", GraphQLView.as_view(graphiql=settings.DEBUG)),
+    path("", views.home),
 ]
