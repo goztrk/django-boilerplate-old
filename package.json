@@ -38,6 +38,7 @@
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
+    "vite-plugin-react-inspector": "^0.3.3",
     "vite-tsconfig-paths": "^4.2.0"
   },
   "peerDependencies": {
