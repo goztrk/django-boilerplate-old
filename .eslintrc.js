@@ -1,17 +1,7 @@
 module.exports = {
   root: true,
-  extends: [
-    'airbnb',
-    'airbnb-typescript',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
-    'plugin:prettier/recommended',
-  ],
-  plugins: ['@typescript-eslint', 'import', 'prettier', 'simple-import-sort'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.eslint.json',
-  },
+  extends: ['react-app', 'plugin:prettier/recommended'],
+  plugins: ['prettier', 'simple-import-sort'],
   rules: {
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': [
