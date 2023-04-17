@@ -13,7 +13,7 @@
   "python.linting.pylintArgs": [
     "--load-plugins",
     "pylint_django",
-    "--django-settings-module=core.settings",
+    "--django-settings-module=core.settings"
   ],
   "search.exclude": {
     "**/.yarn": true,
@@ -25,11 +25,6 @@
   "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
     "editor.defaultFormatter": "monosans.djlint"
   },
-  "cSpell.words": [
-    "generouted",
-    "GRAPHENE",
-    "graphiql",
-    "Parens",
-    "tailwindcss"
-  ],
+  "cSpell.words": ["generouted", "GRAPHENE", "graphiql", "Parens", "tailwindcss", "VITE"],
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }
