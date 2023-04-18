@@ -25,7 +25,7 @@ export default defineConfig({
     outDir: path.resolve(__dirname, 'public/js'),
     rollupOptions: {
       input: {
-        home: 'apps/home/main.tsx',
+        home: path.resolve(__dirname, 'frontend/apps/home/main.tsx'),
       },
     },
   },
